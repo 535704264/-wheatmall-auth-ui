@@ -7,7 +7,7 @@
         <el-row>
           <el-col :span="24">
             <el-form-item label="角色名称">
-              <el-input style="width: 100%" v-model="searchObj.roleName" placeholder="角色名称"></el-input>
+              <el-input style="width: 180px;" v-model="searchObj.roleName" placeholder="角色名称"></el-input>
             </el-form-item>
           </el-col>
         </el-row>
@@ -176,7 +176,7 @@ export default {
 
 </script>
 
-<style scoped>
+<style scoped lang="less">
 .search-div {
   padding:10px;border: 1px solid #EBEEF5;border-radius:3px;
 }
