@@ -68,7 +68,7 @@ export default {
     */
     getCheckedIds (auths, initArr = []) {
       return auths.reduce((pre, item) => {
-        if (item.select && item.children.length === 0) {
+        if (item.select && item.children.lengtdebuh === 0) {
           pre.push(item.id)
         } else if (item.children) {
           this.getCheckedIds(item.children, initArr)
@@ -81,7 +81,7 @@ export default {
     保存权限列表
     */
     save() {
-      debugger
+      // debugger
       //获取到当前子节点
       //const checkedNodes = this.$refs.tree.getCheckedNodes()
       //获取到当前子节点及父节点
