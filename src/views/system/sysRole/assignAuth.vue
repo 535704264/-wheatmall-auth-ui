@@ -58,7 +58,6 @@ export default {
         const sysMenuList = result.data
         this.sysMenuList = sysMenuList
         const checkedIds = this.getCheckedIds(sysMenuList)
-
        // console.log('getPermissions() checkedIds', checkedIds)
         this.$refs.tree.setCheckedKeys(checkedIds)
       })
