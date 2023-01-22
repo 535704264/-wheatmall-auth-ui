@@ -47,6 +47,7 @@
         <template slot-scope="scope">
           <el-button type="primary" icon="el-icon-edit" size="mini" @click="edit(scope.row.id)" title="修改"/>
           <el-button type="danger" icon="el-icon-delete" size="mini" @click="removeDataById(scope.row.id)" title="删除"/>
+          <el-button type="warning" icon="el-icon-baseball" size="mini" @click="showAssignAuth(scope.row)" title="分配权限"/>
         </template>
       </el-table-column>
     </el-table>
@@ -79,7 +80,7 @@
 <script>
 //这里可以导入其他文件（比如：组件，工具js，第三方插件js，json文件，图片文件等等）
 //例如：import 《组件名称》 from '《组件路径》';
-import api from "@/api/system/role/systemRole"
+import api from "@/api/system/sysRole"
 export default {
   //import引入的组件需要注入到对象中才能使用",
   components: {
@@ -211,6 +212,9 @@ export default {
           this.$message.info('取消删除')
         }
       })
+    },
+    showAssignAuth(row) {
+      this.$router.push('/system/assignAuth?id='+row.id+'&roleName='+row.roleName);
     }
 
   },
