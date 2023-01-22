@@ -218,7 +218,7 @@ export default {
       // console.log('加载列表')
       api.findNodes().then(response => {
         this.sysMenuList = response.data
-        console.log(this.sysMenuList)
+        //console.log(this.sysMenuList)
       })
     },
 

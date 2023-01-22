@@ -58,7 +58,7 @@ export default {
         const sysMenuList = result.data
         this.sysMenuList = sysMenuList
         const checkedIds = this.getCheckedIds(sysMenuList)
-        console.log('getPermissions() checkedIds', checkedIds)
+       // console.log('getPermissions() checkedIds', checkedIds)
         this.$refs.tree.setCheckedKeys(checkedIds)
       })
     },
@@ -87,7 +87,7 @@ export default {
       //获取到当前子节点及父节点
       const allCheckedNodes = this.$refs.tree.getCheckedNodes(false, true);
       let idList = allCheckedNodes.map(node => node.id);
-      console.log(idList)
+      //console.log(idList)
       let assginMenuVo = {
         roleId: this.$route.query.id,
         menuIdList: idList
