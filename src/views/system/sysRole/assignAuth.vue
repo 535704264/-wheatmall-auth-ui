@@ -68,7 +68,7 @@ export default {
     */
     getCheckedIds (auths, initArr = []) {
       return auths.reduce((pre, item) => {
-        if (item.select && item.children.lengtdebuh === 0) {
+        if (item.select && item.children.length === 0) {
           pre.push(item.id)
         } else if (item.children) {
           this.getCheckedIds(item.children, initArr)
