@@ -1,6 +1,6 @@
 module.exports = {
 
-  title: 'Vue Admin Template',
+  title: 'Wheat Auth',
 
   /**
    * @type {boolean} true | false
