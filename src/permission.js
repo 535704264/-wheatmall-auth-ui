@@ -18,7 +18,6 @@ router.beforeEach(async(to, from, next) => {
 // determine whether the user has logged in
   const hasToken = getToken()
   if (hasToken) {
-    // debugger
     if (to.path === '/login') {
       // if is logged in, redirect to the home page
       next({ path: '/' })
@@ -36,7 +35,7 @@ router.beforeEach(async(to, from, next) => {
             next()
           }
           const menus = filterAsyncRouter(store.getters.menus)// 1.过滤路由
-          console.log("菜单",menus)
+          console.log(menus)
           router.addRoutes(menus) // 2.动态添加路由
           let lastRou = [{ path: '*', redirect: '/404', hidden: true }]
           router.addRoutes(lastRou)
@@ -73,25 +72,22 @@ router.afterEach(() => { // finish progress bar
 }) // // 遍历后台传来的路由字符串，转换为组件对象
 function filterAsyncRouter(asyncRouterMap) {
   const accessedRouters = asyncRouterMap.filter(route => {
-    // console.log(route.component)
     if (route.component) {
       if (route.component === 'Layout') {
         route.component = Layout
       } else if (route.component === 'ParentView') {
         route.component = ParentView
-      // } else {
+      } else {
         try {
-          // 根据不通环境导入组件
           route.component = _import(route.component)// 导入组件
         } catch (error) {
-          // debugger
+          debugger
           console.log(error)
           route.component = _import('dashboard/index')// 导入组件
         }
       }
     }
     if (route.children && route.children.length > 0) {
-      // 如果有子路由， 递归添加
       route.children = filterAsyncRouter(route.children)
     } else {
       delete route.children
