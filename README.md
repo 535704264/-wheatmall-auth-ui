@@ -11,5 +11,8 @@ brew install python-setuptools
 
 
 ## 灵感
-基于vue-element-admin模版
+基于vue-admin-template模版
 https://panjiachen.github.io/vue-element-admin-site/zh/
+
+项目实现文档
+https://juejin.cn/post/6844903476661583880

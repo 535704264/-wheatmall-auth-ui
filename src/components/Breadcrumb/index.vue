@@ -19,6 +19,7 @@ export default {
     }
   },
   watch: {
+    // 面包屑监听路由变化
     $route() {
       this.getBreadcrumb()
     }
@@ -28,11 +29,13 @@ export default {
   },
   methods: {
     getBreadcrumb() {
+      // 过滤路由，只要有名称的
       // only show routes with meta.title
       let matched = this.$route.matched.filter(item => item.meta && item.meta.title)
       const first = matched[0]
 
       if (!this.isDashboard(first)) {
+        // 如果第一个非首页
         matched = [{ path: '/dashboard', meta: { title: 'Dashboard' }}].concat(matched)
       }
 
