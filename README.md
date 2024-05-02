@@ -1,8 +1,13 @@
-# 麦子商城-权限系统
+# 地拉那系统UI
+
+## 简介
+- 动态权限配置
 
 ## 版本
 - node： v14.19.0 (system)  切换：nvm use system
-- 后端: wheat-mini
+- 后端: tirana
+
+# 
 
 ## 一些安装问题解决
 
