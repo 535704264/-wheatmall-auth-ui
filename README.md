@@ -11,7 +11,6 @@
 npm i 
 npm run dev
 
-
 ## 一些安装问题解决
 gyp - no distutils \
 brew install python-setuptools
