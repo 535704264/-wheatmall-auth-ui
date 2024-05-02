@@ -7,10 +7,12 @@
 - node： v14.19.0 (system)  切换：nvm use system
 - 后端: tirana
 
-# 
+## 开始
+npm i 
+npm run dev
+
 
 ## 一些安装问题解决
-
 gyp - no distutils \
 brew install python-setuptools
 
