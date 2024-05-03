@@ -1,6 +1,6 @@
 module.exports = {
 
-  title: 'Wheat Auth',
+  title: 'Tirana System',
 
   /**
    * @type {boolean} true | false

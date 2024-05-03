@@ -66,7 +66,7 @@ router.beforeEach(async(to, from, next) => {
     }
   }
 })
-
+// 
 router.afterEach(() => { // finish progress bar
   NProgress.done()
 }) // // 遍历后台传来的路由字符串，转换为组件对象
@@ -88,6 +88,7 @@ function filterAsyncRouter(asyncRouterMap) {
       }
     }
     if (route.children && route.children.length > 0) {
+      // 递归转换子组件
       route.children = filterAsyncRouter(route.children)
     } else {
       delete route.children
